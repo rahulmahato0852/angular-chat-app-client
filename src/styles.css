@@ -1,0 +1,52 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+    font-family: poppins;
+    line-height: normal;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.outline-b-i-none:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.img {
+    height: 38px;
+    width: 38px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+ng-icon {
+    display: inline-block;
+    vertical-align: middle;
+    overflow: visible;
+}
+
+.text-md {
+    font-size: 15px;
+}
+
+.text-sm {
+    font-size: 12px;
+}
+
+.scrollbar-sm::-webkit-scrollbar {
+    width: 3px;
+    /* Set the width of the scrollbar */
+}
+
+.scrollbar-sm::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    /* Background color of the scrollbar track */
+}
+
+.scrollbar-sm::-webkit-scrollbar-thumb {
+    background: rgb(5, 177, 5);
+    /* Color of the scrollbar thumb */
+}

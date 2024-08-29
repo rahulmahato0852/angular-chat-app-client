@@ -1,0 +1,24 @@
+<div class="card m-0 p-0  shadow-sm w-100">
+    <div class="card-body ">
+        <div class="d-flex justify-content-between align-items-center">
+
+            <div class="d-flex justify-content-center align-items-center gap-3">
+                <img class="img" [src]="ImgUrl + selectedUser?.hero" alt="">
+                <div class="d-flex justify-content-center flex-column">
+                    <span class="text-md m-0 p-0">{{selectedUser?.name}}</span>
+                    <!-- <span class="text-md m-0 p-0">{{selectedUser?.mobile}}</span> -->
+                    <span class="text-sm m-0 p-0">last seen today at 9:15 am</span>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-center align-items-center gap-3">
+                <div class="d-flex align-items-center gap-1">
+                    <ng-icon size="20" name="bootstrapCameraVideo"></ng-icon>
+                    <ng-icon size="10" name="bootstrapCaretDownFill"></ng-icon>
+                </div>
+                <ng-icon size="20" name="bootstrapSearch"></ng-icon>
+                <ng-icon size="20" name="bootstrapThreeDotsVertical"></ng-icon>
+            </div>
+        </div>
+    </div>
+</div>

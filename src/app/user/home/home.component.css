@@ -1,0 +1,33 @@
+.img {
+    height: 38px;
+    width: 38px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+ng-icon {
+    display: inline-block;
+    vertical-align: middle;
+    overflow: visible;
+}
+
+.text-md {
+    font-size: 15px;
+}
+
+.text-sm {
+    font-size: 12px;
+}
+
+.scrollbar-sm::-webkit-scrollbar {
+    width: 3px;
+}
+
+.scrollbar-sm::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.scrollbar-sm::-webkit-scrollbar-thumb {
+    background: rgb(5, 177, 5);
+}

@@ -1,0 +1,40 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-sm-6 offset-sm-3">
+            <div class="card">
+                <div class="card-header">Login</div>
+                <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="card-body">
+                    <div>
+                        <label for="email" class="form-label">First Email</label>
+                        <input
+                            [ngClass]="loginForm.get('userName')?.touched ? (loginForm.get('userName')?.errors) ? 'is-invalid' : 'is-valid' : ''"
+                            formControlName="userName" type=" text" class="form-control" id="email"
+                            placeholder="Enter Your Email" />
+                        <div class="valid-feedback">Looks good!</div>
+                        <div class="invalid-feedback">Please choose a username.</div>
+                    </div>
+                    <div class="mt-2">
+                        <label for="password" class="form-label">Password</label>
+                        <input
+                            [ngClass]="loginForm.get('password')?.touched ? (loginForm.get('password')?.errors) ? 'is-invalid' : 'is-valid' : ''"
+                            formControlName="password" type="password" class="form-control" id="password"
+                            placeholder="Enter Your Password" />
+                        <div class="valid-feedback">Looks good!</div>
+                        <div class="invalid-feedback">Please choose a Password.</div>
+                    </div>
+                    <button type="submit" [disabled]="loading" class="btn btn-primary w-100 mt-3">
+                        @if(loading) {
+                        <div class="spinner-border"></div>
+                        }@else {
+                        Login
+                        }
+                    </button>
+                    <p class="text-center mt-3">
+                        Dont Have Account? <a [routerLink]="['/auth/register']"
+                            routerLinkActive="router-link-active">Create Account</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

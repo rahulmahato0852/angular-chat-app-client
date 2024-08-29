@@ -1,0 +1,14 @@
+<div class="bg-light p-3 mt-1 gap-2 d-flex align-items-center">
+    <ng-icon size="26" name="heroPlus" class="pointer"></ng-icon>
+
+    <div class="w-100">
+        <form #messageForm="ngForm" (ngSubmit)="onsubmit(messageForm)" class="input-group">
+            <span class="input-group-text bg-light-subtle d-flex justify-content-center align-items-center">
+                <ng-icon size="22" class="pointer" name="bootstrapEmojiSmile"></ng-icon>
+            </span>
+            <input ngModel name="message" type="text" style="outline: none;" class="outline-b-i-none form-control"
+                placeholder="Enter Message">
+        </form>
+    </div>
+    <ng-icon size="23" class="pointer" name="heroMicrophone"></ng-icon>
+</div>

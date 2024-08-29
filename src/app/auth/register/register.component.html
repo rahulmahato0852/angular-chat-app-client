@@ -1,0 +1,61 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 offset-sm-3">
+            <div class="card">
+                <div class="card-header">Signup</div>
+                <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="card-body">
+                    <div>
+                        <label for="name" class="form-label">First name</label>
+                        <input type="text" class="form-control" formControlName="name" placeholder="Enter your name" />
+                        <div class="valid-feedback">Looks good!</div>
+                        <div class="invalid-feedback">Please choose a username.</div>
+                    </div>
+                    <div class="mt-2">
+                        <label for="email" class="form-label"> Email</label>
+                        <input type="text" class="form-control" formControlName="email"
+                            placeholder="Enter Your Email" />
+                        <div class="valid-feedback">Looks good!</div>
+                        <div class="invalid-feedback">Please choose a username.</div>
+                    </div>
+                    <div class="mt-2">
+                        <label for="mobile" class="form-label">Mobile</label>
+                        <input type="text" class="form-control" formControlName="mobile"
+                            placeholder="Enter Your mobile" />
+                        <div class="valid-feedback">Looks good!</div>
+                        <div class="invalid-feedback">Please choose a mobile.</div>
+                    </div>
+                    <div class="mt-2">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="text" class="form-control" formControlName="password"
+                            placeholder="Enter Your Password" />
+                        <div class="valid-feedback">Looks good!</div>
+                        <div class="invalid-feedback">Please choose a password.</div>
+                    </div>
+                    <div class="mt-2">
+                        <label for="cpassword" class="form-label">Confirm Password</label>
+                        <input type="text" class="form-control" formControlName="cpassword"
+                            placeholder="Confirm Your Password" />
+                        <div class="valid-feedback">Looks good!</div>
+                        <div class="invalid-feedback">
+                            Please Recheck Your Password.
+                        </div>
+                    </div>
+                    <div class="mt-2">
+                        <label for="cpassword" class="form-label">Choose Image</label>
+                        <input (change)="handleHero($event)" type="file" class="form-control" />
+                    </div>
+                    <button [disabled]="loading" type="submit" class="btn btn-primary w-100 mt-3">
+                        @if(loading) {
+                        <div class="spinner-border"></div>
+                        }@else {
+                        Signup
+                        }
+                    </button>
+                    <p class="text-center mt-3">
+                        Already Have Account? <a [routerLink]="['/auth']">Login</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

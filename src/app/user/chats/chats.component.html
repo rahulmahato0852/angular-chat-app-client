@@ -1,0 +1,24 @@
+@if(loading){
+<div class="d-flex justify-content-center align-items-center h-100 ">
+    <div class="spinner-border text-primary"></div>
+</div>
+}@else {
+
+<p id="chat-parent" class="d-flex  gap-1"
+    [ngClass]="(selectedUser && selectedUser._id !== item.sender?._id) ? 'justify-content-end' :'' "
+    *ngFor="let item of allmessages;let i = index">
+
+    <span [ngClass]="(selectedUser && selectedUser._id !== item.sender?._id) ? 'text-bg-dark':''" class=" badge text-bg-light
+        px-2 py-2">
+        {{item.message}}
+    </span>
+
+    <img height="12px" class="align-self-end"
+        *ngIf="sendloading && allmessages.length -1=== i && (selectedUser && selectedUser._id !== item.sender?._id)"
+        src="https://uxwing.com/wp-content/themes/uxwing/download/time-and-date/clock-icon.png" alt="">
+
+    <img height="12px" class="align-self-end" *ngIf=" (selectedUser && selectedUser._id !== item.sender?._id)"
+        src="https://www.svgrepo.com/show/6940/check-mark.svg" alt="">
+
+</p>
+}
